@@ -1,0 +1,10 @@
+version: '2'
+services:
+  ngrok:
+    image: wernight/ngrok 
+    command: ngrok http node:3000
+    links:
+      - node
+    ports:
+      - "4040:4040"
+
